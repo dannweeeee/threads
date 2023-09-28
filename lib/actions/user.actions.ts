@@ -3,8 +3,18 @@
 import { revalidatePath } from "next/cache";
 import User from "../models/user.model";
 import { connectToDB } from "../mongoose";
+import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 
-export async function updateUser(userId: string, username: string, name: string, bio: string, image: string, path: string,): Promise<void> {
+interface Params {
+    userId: string;
+    username: string;
+    name: string;
+    bio: string;
+    image: string;
+    path: string;
+}
+
+export async function updateUser({userId, username, name, bio, image, path,}: Params): Promise<void> { // pass the entire object then destructure it in the function by name - makes code less error prone
     connectToDB();
 
     try {
