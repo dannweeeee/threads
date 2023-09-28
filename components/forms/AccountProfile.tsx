@@ -1,7 +1,7 @@
 "use client"
 
 import { useForm } from 'react-hook-form';
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -10,9 +10,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from "zod";
 import { UserValidation } from '@/lib/validations/user';
@@ -121,6 +121,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                   <FormControl className="flex-1 text-base-semibold text-gray-200">
                     <Input type="file" accept="image/*" placeholder="Upload a photo" className="account-form_image-input" onChange={(e) => handleImage(e, field.onChange)} />
                   </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />
@@ -136,6 +137,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                   <FormControl>
                     <Input type="text" className="account-form_input no-focus" {...field} />
                   </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />
@@ -151,6 +153,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                   <FormControl>
                     <Input type="text" className="account-form_input no-focus" {...field} />
                   </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />
@@ -166,6 +169,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                   <FormControl>
                     <Textarea rows={10} className="account-form_input no-focus" {...field} />
                   </FormControl>
+                  <FormMessage />
                 </FormItem>
               )}
             />
