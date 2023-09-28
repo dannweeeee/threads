@@ -47,6 +47,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
         defaultValues: {
             profile_photo: user?.image || "",
             name: user?.name || "",
+            username: user?.username ? user.username : "",
             bio: user?.bio || "",
         }
     })
@@ -94,6 +95,12 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
         image: values.profile_photo,
         path: pathname
       });
+
+      if (pathname === '/profile/edit') {
+        router.back();
+      } else {
+        router.push ('/'); // go from onboarding to /home
+      }
     }
 
     return (

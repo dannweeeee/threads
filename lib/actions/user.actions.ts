@@ -3,7 +3,6 @@
 import { revalidatePath } from "next/cache";
 import User from "../models/user.model";
 import { connectToDB } from "../mongoose";
-import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 
 interface Params {
     userId: string;
