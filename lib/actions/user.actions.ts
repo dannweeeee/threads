@@ -33,6 +33,6 @@ export async function updateUser({userId, username, name, bio, image, path,}: Pa
             revalidatePath(path); // a nextjs function that allows you to revalidate data associated with a specific path. This is useful for scenarios wherey you want to update your cached data without waitin for a revalidation period to expire.
         }
     } catch (error: any) {
-        throw new Error(`Failed to create/update user: ${error.message}`)
+        throw new Error(`Failed to create/update user: ${error.message}`);
     }
 }
