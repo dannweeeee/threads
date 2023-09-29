@@ -65,7 +65,7 @@ const ThreadCard = ({
                                 <Image src="/assets/repost.svg" alt="repost" width={24} height={24} className="cursor-pointer object-contain"/>
                                 <Image src="/assets/share.svg" alt="share" width={24} height={24} className="cursor-pointer object-contain"/>
                             </div>
-                            {isComment && comments.length > 0 (
+                            {isComment && comments.length > 0 && (
                                 <Link href={`/thread/${id}`}>
                                     <p className="mt-1 text-subtle-medium text-gray-1">{comments.length} replies</p>
                                 </Link>
