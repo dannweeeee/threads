@@ -30,7 +30,7 @@ export async function createThread({ text, author, communityId, path }: Params) 
         revalidatePath(path); // make sure that the changes happen immediately on the website
 
     } catch(error: any) {
-        throw new Error(`Error creating thread: ${error.message}`);
+        throw new Error(`Failed to create new thread: ${error.message}`);
     }
 }
 
@@ -104,5 +104,41 @@ export async function fetchThreadById(id: string) {
         return thread;
     } catch (error: any) {
         throw new Error(`Error fetching thread: ${error.message}`)
+    }
+}
+
+export async function addCommentToThread(threadId: string, commentText: string, userId: string, path: string) {
+    connectToDB();
+
+    try {
+        // adding a comment
+        // 1. find the original thread by its ID
+        const originalThread = await Thread.findById(threadId);
+
+        if(!originalThread) {
+            throw new Error("Thread not found");
+        }
+
+        // 2. Create a new thread with the comment text
+        const commentThread = new Thread({
+            text: commentText,
+            author: userId,
+            parentId: threadId,
+        })
+
+        // 3. Save the new thread
+        const savedCommentThread = await commentThread.save();
+
+        // 4. Update the original thread to include the new comment
+        originalThread.children.push(savedCommentThread._id);
+        
+        // 5. Save the original thread
+        await originalThread.save();
+
+        // 6. Revalidate the path
+        revalidatePath(path);
+
+    } catch (error: any) {
+        throw new Error(`Error adding comment to thread: ${error.message}`)
     }
 }
