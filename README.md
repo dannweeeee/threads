@@ -34,13 +34,19 @@ Tools that I used:
 
 ## Installation
 
-Clone the repository <br>
-`git clone https://github.com/dannweeeee/threads.git`
+Clone the repository
+```
+git clone https://github.com/dannweeeee/threads.git
+```
 
 ## Deployment
 
-First install the dependencies with the following command: <br>
-`npm install`<br>
+First install the dependencies with the following command:
+```
+npm install
+```
 
-Thereafter run the following command to run Threads locally: <br>
-`npm run dev`
+Thereafter run the following command to run Threads locally:
+```
+npm run dev
+```
