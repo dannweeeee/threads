@@ -27,10 +27,33 @@ Visit the Deployed Vercel Website at: https://threads-by-dann.vercel.app/
 - **TypeScript**: A superset of JavaScript, adding static typing to the language.
 - **MongoDB**: A NoSQL database for flexible and scalable data storage.
 
+## Tools
+
+Tools that I used:
+
+- [**Clerk**](https://clerk.com/) - For Authentication, Communities Management, User Management and Webhooks
+- [**Shadcn**](https://ui.shadcn.com/) - For Accessible, Open Source User Interface Components
+- [**Uploadthing**](https://uploadthing.com/) - For File Uploads (Mainly Image)
+- [**Zod**](https://zod.dev/) - For schema declaration and validation library (Avoided Duplicates especially for Multithreading Feature)
+
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/dannweeeee/threads.git`
+Clone the repository
+
+```
+git clone https://github.com/dannweeeee/threads.git
+```
 
 ## Deployment
 
-1. Enter the command: `npm run dev`
+First install the dependencies with the following command:
+
+```
+npm install
+```
+
+Thereafter run the following command to run Threads locally:
+
+```
+npm run dev
+```
