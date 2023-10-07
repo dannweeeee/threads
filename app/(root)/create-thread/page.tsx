@@ -8,15 +8,15 @@ async function Page() {
 
     if(!user) return null;
 
+    // fetch organization list created by user
     const userInfo = await fetchUser(user.id);
-
-    if (!userInfo?.onboarded) redirect('/onboarding'); // move all the users that maybe switch their url bar manually, it will bring them back to onboarding
+    if (!userInfo?.onboarded) redirect("/onboarding"); // move all the users that maybe switch their url bar manually, it will bring them back to onboarding
 
     return (
         <>
-        <h1 className="head-text">Create Thread</h1>
-
-        <PostThread userId={userInfo._Id} />
+          <h1 className='head-text'>Create Thread</h1>
+    
+          <PostThread userId={userInfo._id} />
         </>
     );
 }
