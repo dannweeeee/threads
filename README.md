@@ -38,6 +38,8 @@ Tools that I used:
 
 ## Deployment
 
-Enter the following commands: 
-`npm install`
+First install the dependencies with the following command: <br>
+`npm install`<br>
+
+Thereafter run the following command to run Threads locally: <br>
 `npm run dev`
