@@ -38,4 +38,6 @@ Tools that I used:
 
 ## Deployment
 
-1. Enter the command: `npm run dev`
+Enter the following commands: 
+`npm install`
+`npm run dev`
