@@ -34,7 +34,8 @@ Tools that I used:
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/dannweeeee/threads.git`
+Clone the repository <br>
+`git clone https://github.com/dannweeeee/threads.git`
 
 ## Deployment
 
