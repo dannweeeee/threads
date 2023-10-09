@@ -5,7 +5,7 @@ import '../globals.css';
 
 export const metadata = {
     title: 'Threads Clone',
-    description: 'A Next.js 13 Meta Threads Application by Dann'
+    description: 'A Next.js 13 Meta Threads Clone Application by Dann'
 }
 
 const inter = Inter({ subsets: ['latin']}) // font: array subsets so that we can have multiple subsets within it
