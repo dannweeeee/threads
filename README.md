@@ -1,4 +1,4 @@
-# Full Stack MERN Next.js 13 Threads Clone
+# Threads Clone
 
 <img width="1440" alt="Screenshot 2023-10-07 at 4 17 43 PM" src="https://github.com/dannweeeee/threads/assets/42776950/d14cbbda-3ee2-4ea6-a199-62ba3876d69a">
 
