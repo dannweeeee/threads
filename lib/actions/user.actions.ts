@@ -94,7 +94,7 @@ export async function fetchUserPosts(userId: string) {
   }
 }
 
-// Almost similar to Thead (search + pagination) and Community (search + pagination)
+// Almost similar to Thread (search + pagination) and Community (search + pagination)
 export async function fetchUsers({
   userId,
   searchString = "",
