@@ -4,7 +4,7 @@
 
 ## Overview
 
-The Full Stack MERN Next.js 13 Threads Clone is a web application developed to emulate the features and user experience of the newly released Threads by Meta. It incorporates modern technologies such as React, Next.js, TypeScript, and MongoDB to provide a seamless and performant user interface. <br>
+Threads was developed to emulate the features and user experience of the newly released Threads by Meta. Powered by modern technologies such as React, Next.js, TypeScript, and MongoDB to provide a seamless and performant user interface. **THIS IS A PROGRESSIVE WEB APP TEMPLATE** <br>
 <br>
 **Visit the Deployed Vercel Website at:** https://threads-by-dann.vercel.app/
 
